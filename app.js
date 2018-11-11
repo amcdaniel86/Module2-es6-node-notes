@@ -197,5 +197,43 @@ const mammals = ["puppy", "kitten", "bunny"];
 // console.log(animals);
 
 // spread way - SO MUCH FASTER
-const animals = [...mammals, ...reptiles];
-console.log(animals);
+// const animals = [...mammals, ...reptiles];
+// console.log(animals);
+
+// function sum(...theArgs) {
+//   return theArgs.reduce((previous, current) => {
+//     return previous + current;
+//   });
+// }
+// console.log(sum(1, 2, 3));
+// console.log(sum(1, 2, 3, 4));
+
+// function myFunction(arg1, arg2) {
+//   console.log(arg1);
+//   console.log(arg2);
+// }
+
+// myFunction("first argument", "second argument", "third argument");
+
+// numbers is the name for the array being used
+// function add(...numbers) {
+//   let sum = 0;
+
+//   for (let oneNumber of numbers){
+//     sum += oneNumber;
+//   }
+//   return sum;
+// }
+// console.log(add(1));
+// console.log(add(1, 2));
+// console.log(add(1,2,5,8));
+
+function add(...numbers) {
+  let sum = 0;
+    return numbers.reduce(function(sum, next){
+      return sum + next;
+    })
+    return sum;
+}
+
+console.log(add (1,2,5,8));
